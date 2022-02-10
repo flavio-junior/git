@@ -39,14 +39,16 @@ Comandos básicos para o usar no terminal com o git:
 18. git mv index.html contato.html - Renomeia um arquivo especifico.
 19. git commit --amend --no-edit - Para adicionar alterações no projeto sem ter a necessidade de criar um novo commit e adicionando a último commit.
 20. git reset 5545fa56dfc94501d3a120ea22ea7876c6c191d8 - Desfazer o último commit para um commit especifico de acordo com o commit que foi informado pelo usuário porém não desfaz as alterações no projeto.
-21.  git reset --hard 5545fa56dfc94501d3a120ea22ea7876c6c191d8 - Dezfazer o úlitimo commit completo sem deixar arquivos do commit que foi desfeito.
-22.  git rebase -i HEAd~2 - Para excluir um commit especifico.
-23.  git checkout -f - Defazer uma ação indesejada dentro do projeto.
-24.  git remote -v Listar todos os servidores remotos dentro do projeto.
-25.  git branch - Lista todas as branchs do projeto.
-26.  git push origin master - Para subir o repositório local para a branch master.
-27.  git clone - Clonar determinado projeto.
-
+21. git reset --hard 5545fa56dfc94501d3a120ea22ea7876c6c191d8 - Dezfazer o úlitimo commit completo sem deixar arquivos do commit que foi desfeito.
+22. git rebase -i HEAd~2 - Para excluir um commit especifico.
+23. git checkout -f - Defazer uma ação indesejada dentro do projeto.
+24. git remote -v Listar todos os servidores remotos dentro do projeto.
+25. git branch - Lista todas as branchs do projeto.
+26. git push origin master - Para subir o repositório local para a branch master.
+27. git clone - Clonar determinado projeto.
+28. git config --global user.name "Flávio Júnior" - Define o nome do usuário.
+29. git config --global user.email flaviojunior.work@gmail.com - Define o e-mail do usuário.
+30. git config --global init.dafaultBranch master - Define o nome da branch
 
 # Observações
 para ignorar determinado arquivo ou arquivos em um repositório é necessário criar o seguinte arquivo dentro do seu projeto:
