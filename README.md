@@ -13,9 +13,9 @@ Comandos básicos para usar no terminal:
 
 Siglas:
 * Untracked - Arquivo não rastrado ou crackeado
-* Unmodified
-* Modified
-* Staged
+* Unmodified - Não modificado
+* Modified - Modificado
+* Staged - Area de planejamento
 
 Comandos básicos para o usar no terminal com o git:
 1. git init - Inicia um repositório git
@@ -30,6 +30,8 @@ Comandos básicos para o usar no terminal com o git:
 10. git diff --cached -- sinonimo de git diff --staged
 11. git commit - Cria um commit
 12. git restore - desfazer uma ação em determinado arquivo
-13. 
+13.  git log - Histórico
+14.  git commit -m "Esse é um commit em uma única linha" - commit em uma única linha
+15.  
 
 
