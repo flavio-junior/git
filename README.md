@@ -1,25 +1,44 @@
-# CMD
-Comandos básicos para usar no terminal:
-1. mkdir - criar uma pasta
-2. dir - exibi todos os arquivos listados em um diretório especifico
-3. cls - limpa todos os comandos digitados no pront de comando
-4. cd - acessa determinada pasta através da rota especificada pelo usuário
-6. cd.. - voltar 
-7. ipconfig - Para verificar o ip da máquina
-8. 
+# Guia básico de comandos do git
+
+## Ajuda
+
+**Geral**
+```
+git help
+```
+
+**Comandos específico**
+```
+git help add
+git help commit
+git help status
+```
+## Configurações 
+
+Adicionar nome do usuário em nivel global
+```
+git config --global user.name "Flávio Júnior"
+```
+Adicionar e-mail do usuário em nivel global
+```
+git config --global user.email flaviojunior.work@gmail.com
+```
+Adicionar nome da branch em nivel global
+```
+git config --global init.dafaultBranch master
+```
 
 
-# Git 
 
-Siglas:
-* Untracked - Arquivo não rastrado ou crackeado
-* Unmodified - Não modificado
-* Modified - Modificado
-* Staged - Area de planejamento
-* Commit - Responsável pelo histórico de versão do repositório. Salva, registra, cria e altera arquivos, registrados em determinado periodo de tempo
+|  SIGLA   |  FUNÇÃO
+|:--------:|:--------: 
+ git init | Iniciar repositório   
+ git status | Retorna o status do repositório selecionado
+
 
 Comandos básicos para o usar no terminal com o git:
-1. git init - Inicia um repositório git.
+
+1.  fdf 
 2. git status - Verifica e informa o status dos arquivos listados no repositório.
 3. git status -s - Flag ou indicado informado para imprimir arquivos no formato curto.
 4. git status --short - indicado informado para imprimir arquivos no formato curto.
@@ -46,9 +65,25 @@ Comandos básicos para o usar no terminal com o git:
 25. git branch - Lista todas as branchs do projeto.
 26. git push origin master - Para subir o repositório local para a branch master.
 27. git clone - Clonar determinado projeto.
-28. git config --global user.name "Flávio Júnior" - Define o nome do usuário.
-29. git config --global user.email flaviojunior.work@gmail.com - Define o e-mail do usuário.
-30. git config --global init.dafaultBranch master - Define o nome da branch
+
+**Git - Sistema de controle de versão de arquivos**
+
+Siglas:
+* Untracked - Arquivo não rastrado ou crackeado
+* Unmodified - Não modificado
+* Modified - Modificado
+* Staged - Area de planejamento
+* Commit - Responsável pelo histórico de versão do repositório. Salva, registra, cria e altera arquivos, registrados em determinado periodo de tempo
+
+# CMD
+Comandos básicos para usar no terminal:
+1. mkdir - criar uma pasta
+2. dir - exibi todos os arquivos listados em um diretório especifico
+3. cls - limpa todos os comandos digitados no pront de comando
+4. cd - acessa determinada pasta através da rota especificada pelo usuário
+6. cd.. - voltar 
+7. ipconfig - Para verificar o ip da máquina
+8. 
 
 # Observações
 para ignorar determinado arquivo ou arquivos em um repositório é necessário criar o seguinte arquivo dentro do seu projeto:
@@ -88,7 +123,6 @@ para ignorar determinado arquivo ou arquivos em um repositório é necessário c
  PUSH - Subir o histórico de versionamento para o servidor 
  
  
- 
- 
- 
+**Referências:**
 
+[Git - Documentation](https://git-scm.com/doc)
