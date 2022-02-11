@@ -27,45 +27,96 @@ Adicionar nome da branch em nivel global
 ```
 git config --global init.dafaultBranch master
 ```
-Adicionar um arquivo em específico
+# Comandos do git:
+**Iniciar repositório**
+```
+git init
+```
+**Verificar status do repositório**
+```
+git status
+```
+**Listar o histórico de commits do repositório**
+```
+git log
+```
+**Listar todas as branch do projeto**
+```
+git branch
+```
+**Adicionar um arquivo em específico**
 ```
 git add arquivo.txt
 ```
-
-|  SIGLA   |  FUNÇÃO
-|:--------:|:--------: 
- git init | Iniciar repositório   
- git status | Retorna o status do repositório selecionado
- git log | Exibir o histórico de commits do repositório
- git add . | Adicionar todos os arquivos criados recentemente
-
-Comandos básicos para o usar no terminal com o git:
-
+**Adicionar todos os arquivos criados recentemente**
+```
+git add .
+```
+**Desfazer add**
+```
+git restore --staged contato.html
+```
+**Fazer um commit**
+```
+git commit
+```
+**Commit de parâmetro único**
+```
+git commit -am "Commit de parâmetro único"
+```
+**Fazendo commit de forma direta sem uso do add<arquivo> ou add .**
+```
+git commit -am "fazendo commit de forma direta"
+```
+**Desfazer ação sem defazer as alterações que foram feitas no código**
+```
+git reset index.html
+```
+**Desfazer ação**
+```
+git restore index.html
+```
+Defazer uma ação indesejada dentro do projeto.
+```
+git checkout -f 
+```
+**Desfazer ação e voltar para um commit especifico**
+```
+git reset --hard 3e39bbcd5d0e62aa612bb848ccb5fea77f07ffbc
+```
+**Excluir arquivo ou diretóro**
+```
+git rm index.html
+```
+**Renomear arquivo** 
+````
+git mv index.html contato.html
+````
+ 
 1.  fdf 
-2. git status - Verifica e informa o status dos arquivos listados no repositório.
+2. git status
 3. git status -s - Flag ou indicado informado para imprimir arquivos no formato curto.
 4. git status --short - indicado informado para imprimir arquivos no formato curto.
-5. git add . - Adiciona todos os arquivos que estão na pasta.
+5. git add . 
 6. git add README.md - Para adicionar apenas um arquivo especifico.
-7. git reset index.html - Para resertar uma arquivo especifico.
+7. git reset index.html -
 8. git diff - Mostra as mudanças que foram feita em determinado arquivo.
 9. git diff --staged - Mostra as mudanças que foram feita em determinado arquivo.
 10. git diff --cached -- sinonimo de git diff --staged.
-11. git commit - Cria um commit.
-12. git restore - desfazer uma ação em determinado arquivo.
-13. git log - Histórico.
-14. git commit -m "Esse é um commit em uma única linha" - commit em uma única linha.
-15. git restore --staged - desfazer add .
-16. rm - deletar arquivo.
-17. git commit -am "descrição do commit" - fazendo commit de forma direta.
-18. git mv index.html contato.html - Renomeia um arquivo especifico.
+11. git commit - 
+12. git restore - 
+13. git log -
+14. git commit -m 
+15. git restore --staged - 
+16. rm - 
+17. git commit -am "descrição do commit" - 
+18. git mv index.html contato.html - 
 19. git commit --amend --no-edit - Para adicionar alterações no projeto sem ter a necessidade de criar um novo commit e adicionando a último commit.
 20. git reset 5545fa56dfc94501d3a120ea22ea7876c6c191d8 - Desfazer o último commit para um commit especifico de acordo com o commit que foi informado pelo usuário porém não desfaz as alterações no projeto.
-21. git reset --hard 5545fa56dfc94501d3a120ea22ea7876c6c191d8 - Dezfazer o úlitimo commit completo sem deixar arquivos do commit que foi desfeito.
+21. git reset --hard 5545fa56dfc94501d3a120ea22ea7876c6c191d8 
 22. git rebase -i HEAd~2 - Para excluir um commit especifico.
-23. git checkout -f - Defazer uma ação indesejada dentro do projeto.
+23. git checkout -f - 
 24. git remote -v Listar todos os servidores remotos dentro do projeto.
-25. git branch - Lista todas as branchs do projeto.
 26. git push origin master - Para subir o repositório local para a branch master.
 27. git clone - Clonar determinado projeto.
 
