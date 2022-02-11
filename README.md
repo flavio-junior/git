@@ -27,14 +27,17 @@ Adicionar nome da branch em nivel global
 ```
 git config --global init.dafaultBranch master
 ```
-
-
+Adicionar um arquivo em específico
+```
+git add arquivo.txt
+```
 
 |  SIGLA   |  FUNÇÃO
 |:--------:|:--------: 
  git init | Iniciar repositório   
  git status | Retorna o status do repositório selecionado
-
+ git log | Exibir o histórico de commits do repositório
+ git add . | Adicionar todos os arquivos criados recentemente
 
 Comandos básicos para o usar no terminal com o git:
 
