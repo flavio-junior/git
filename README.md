@@ -1,5 +1,3 @@
-# Guia básico de comandos do git
-
 ## Ajuda
 
 **Geral**
@@ -27,7 +25,6 @@ Adicionar nome da branch em nivel global
 ```
 git config --global init.dafaultBranch master
 ```
-# Comandos do git:
 **Iniciar repositório**
 ```
 git init
@@ -35,6 +32,8 @@ git init
 **Verificar status do repositório**
 ```
 git status
+git status -s 
+git status --short
 ```
 **Listar o histórico de commits do repositório**
 ```
@@ -44,7 +43,7 @@ git log
 ```
 git branch
 ```
-**Adicionar um arquivo em específico**
+**Adicionar um arquivo**
 ```
 git add arquivo.txt
 ```
@@ -64,9 +63,13 @@ git commit
 ```
 git commit -am "Commit de parâmetro único"
 ```
-**Fazendo commit de forma direta sem uso do add<arquivo> ou add .**
+**Fazendo commit de forma direta sem uso do add .**
 ```
 git commit -am "fazendo commit de forma direta"
+```
+**Para adicionar alterações do projeto sem ter a necessidade de criar um novo commit**
+```
+git commit --amend --no-edit index.html
 ```
 **Desfazer ação sem defazer as alterações que foram feitas no código**
 ```
@@ -76,11 +79,11 @@ git reset index.html
 ```
 git restore index.html
 ```
-Defazer uma ação indesejada dentro do projeto.
+**Defazer uma ação indesejada dentro do projeto**
 ```
 git checkout -f 
 ```
-**Desfazer ação e voltar para um commit especifico**
+**Desfazer alterações e voltar para um commit especifico**
 ```
 git reset --hard 3e39bbcd5d0e62aa612bb848ccb5fea77f07ffbc
 ```
@@ -92,42 +95,16 @@ git rm index.html
 ````
 git mv index.html contato.html
 ````
- 
-1.  fdf 
-2. git status
-3. git status -s - Flag ou indicado informado para imprimir arquivos no formato curto.
-4. git status --short - indicado informado para imprimir arquivos no formato curto.
-5. git add . 
-6. git add README.md - Para adicionar apenas um arquivo especifico.
-7. git reset index.html -
-8. git diff - Mostra as mudanças que foram feita em determinado arquivo.
-9. git diff --staged - Mostra as mudanças que foram feita em determinado arquivo.
-10. git diff --cached -- sinonimo de git diff --staged.
-11. git commit - 
-12. git restore - 
-13. git log -
-14. git commit -m 
-15. git restore --staged - 
-16. rm - 
-17. git commit -am "descrição do commit" - 
-18. git mv index.html contato.html - 
-19. git commit --amend --no-edit - Para adicionar alterações no projeto sem ter a necessidade de criar um novo commit e adicionando a último commit.
-20. git reset 5545fa56dfc94501d3a120ea22ea7876c6c191d8 - Desfazer o último commit para um commit especifico de acordo com o commit que foi informado pelo usuário porém não desfaz as alterações no projeto.
-21. git reset --hard 5545fa56dfc94501d3a120ea22ea7876c6c191d8 
-22. git rebase -i HEAd~2 - Para excluir um commit especifico.
-23. git checkout -f - 
+**Exibir os dados que foram adicionados em determinado arquivo**
+```
+git diff
+git diff --staged
+git diff --cached
+```
+
 24. git remote -v Listar todos os servidores remotos dentro do projeto.
 26. git push origin master - Para subir o repositório local para a branch master.
 27. git clone - Clonar determinado projeto.
-
-**Git - Sistema de controle de versão de arquivos**
-
-Siglas:
-* Untracked - Arquivo não rastrado ou crackeado
-* Unmodified - Não modificado
-* Modified - Modificado
-* Staged - Area de planejamento
-* Commit - Responsável pelo histórico de versão do repositório. Salva, registra, cria e altera arquivos, registrados em determinado periodo de tempo
 
 # CMD
 Comandos básicos para usar no terminal:
@@ -152,23 +129,8 @@ para ignorar determinado arquivo ou arquivos em um repositório é necessário c
  
  ``` *.txt ```
  
- # Como trabalhar com repositórios remotos?
- **CLONE**
- ```
- 
- ```
- **FETCH**
- ```
- 
- ```
- **PUSH**
- ```
- 
- ```
- **PULL**
- ```
- 
- ```
+ ## Repositório Remoto
+ Clonar repositório
  
  CLONE - clonar repositório
  
@@ -176,6 +138,7 @@ para ignorar determinado arquivo ou arquivos em um repositório é necessário c
  
  PUSH - Subir o histórico de versionamento para o servidor 
  
+ PULL
  
 **Referências:**
 
