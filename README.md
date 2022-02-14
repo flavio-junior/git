@@ -1,3 +1,8 @@
+## Tipos de sistemas de controle de versão
+* Local Computer ```Local```
+* Central VCS Server ```Centralizado```
+* Server Computer ```Distribuido ```
+
 ## Ajuda
 
 **Geral**
