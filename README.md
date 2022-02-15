@@ -78,11 +78,6 @@ git log
 ```
 git branch
 ```
-**Exibir as mudanças adicionados ou removidas em determinado arquivo**
-```
-git diff
-git diff --cached
-```
 ## Adicionar um arquivo ou diretório na **staging area**
 **Adicionar um arquivo**
 ```
@@ -99,6 +94,7 @@ git diff
 **Visualizar as mudanças aplicadas em determinado arquivo**
 ```
 git diff --staged
+git diff --cached
 ```
 **Remover arquivo**
 ```
