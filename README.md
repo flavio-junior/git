@@ -27,13 +27,13 @@ git help status
 git add -h
 ```
 
-## Checando configurações 
+## Alterar configurações do sistema  
 **Verificar as configurações do usuário na máquina que foi instalado o git**
 ```
 git config -l
 git config --list
 ```
-**Visualizar todas as suas configurações e aonde elas estão sendo utilizadas**
+**Visualizar todas as suas configurações e aonde estão sendo utilizadas**
 ```
 git config --list --show-origin
 ```
@@ -51,7 +51,7 @@ git config --global user.email flaviojunior.work@gmail.com
 git config --global init.dafaultBranch master
 ```
 
-## Inicializando um repositório em um diretório existente
+## Criando repositório local
 **No windows**
 ```
 C:\Users\Info\Documents\git\git-repository>
@@ -69,10 +69,6 @@ git status --short
 **Abrir o projeto no Visual Studio Code**
 ```
 C:\Users\Info\Documents\git\git-repository>code .
-```
-**Listar o histórico de commits do repositório**
-```
-git log
 ```
 **Listar todas as branch do projeto**
 ```
@@ -100,6 +96,10 @@ git diff --cached
 ```
 git reset index.html
 ```
+**Desfazer ação**
+```
+git restore index.html
+```
 **Desfazer add**
 ```
 git restore --staged contato.html
@@ -109,29 +109,79 @@ git restore --staged contato.html
 ```
 git commit
 ```
+**Realizar commit com os arquivos modificados e enviados para  a área de planejamento**
+```
+git commit -m "Implementando recursos na página principal do site"
+```
 **Commit de parâmetro único**
 ```
 git commit -am "Commit de parâmetro único"
 ```
-**Fazendo commit de forma direta sem uso do add .**
-```
-git commit -am "fazendo commit de forma direta"
-```
 **Para adicionar alterações do projeto sem ter a necessidade de criar um novo commit**
 ```
-git commit --amend --no-edit index.html
-```
-**Desfazer ação**
-```
-git restore index.html
+git commit --amend --no-edit
 ```
 **Defazer uma ação indesejada dentro do projeto**
 ```
 git checkout -f 
 ```
+**Listar o histórico de commits do repositório**
+```
+git log
+```
+**Desfazer commit sem apagar os arquivos modificados no projeto**
+```
+git reset 0d27528ebba6650b0a70d59d529983b81adf2962 
+```
 **Desfazer alterações e voltar para um commit especifico**
 ```
 git reset --hard 3e39bbcd5d0e62aa612bb848ccb5fea77f07ffbc
+```
+**Listar uma quantidade de commits especificos para excluir**
+```
+git rebase -i HEAD~4
+```
+**Resultado do comando anterior**
+```
+pick 5e3670f Implementando recursos na página principal do site
+pick c0abaf2 Página de contato
+pick 9dc5ab1 Página sobre
+pick a652e8a Página home
+
+# Rebase 5611ed4..a652e8a onto 5611ed4 (4 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup [-C | -c] <commit> = like "squash" but keep only the previous
+#                    commit's log message, unless -C is used, in which case
+#                    keep only this commit's message; -c is same as -C but
+#                    opens the editor
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified); use -c <commit> to reword the commit message
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+```
+**Excluindo commit especifico**
+```
+pick 5e3670f Implementando recursos na página principal do site
+pick c0abaf2 Página de contato
+drop 9dc5ab1 Página sobre
+pick a652e8a Página home
 ```
 **Excluir arquivo ou diretóro**
 ```
@@ -142,10 +192,49 @@ git rm index.html
 git mv index.html contato.html
 ````
 
-24. git remote -v Listar todos os servidores remotos dentro do projeto.
-26. git push origin master - Para subir o repositório local para a branch master.
-27. git clone - Clonar determinado projeto.
 
+## gitignore
+**Nomeação de um arquivo gitignore**
+```
+.gitignore
+```
+**Ignorar um arquivo especifico**
+``` 
+arquivos_secretos.txt 
+``` 
+**Ignorar arquivos especificos**
+```
+*.txt
+```
+
+ ## Trabalhando com repositório remoto
+ * CLONE ```Clonar repositório remoto```
+ * FETCH ```Reponsável por baixar as referências dos dados em um repositório local```
+ * PUSH ```Subir código fonte para o servidor```
+ * PULL  ```Baixar arquivos reais na area de trabalho local```
+ 
+Vincular repositório local com um repositório remoto
+```
+git remote add origin https://github.com/flavio-junior/git-crash.git
+```
+Listar todos os repositórios remotos
+```
+git remote
+git remote -v
+```
+Subir repositório local para o servidor
+```
+git push origin main  
+```
+Clonar repositório remoto
+```
+git clone https://gist.github.com/2545add34e4fec21ec16.git
+```
+Baixar uma branch especifica
+```
+git pull origin master
+```
+ 
 # CMD
 Comandos básicos para usar no terminal:
 1. mkdir - criar uma pasta
@@ -159,51 +248,13 @@ Comandos básicos para usar no terminal:
 :---------|:----------|
  Branches | Galho
  CVS | Sistema de controle de versão
+ Untracked | Não creckeado
+ Unmodified | Não modificado
+ Modified | Modificado
+ Staged | Área de planejamento
  Untracked files | arquivos não crackeado
  Changes to be committed | Alterações confirmadas
  Staging area | Area de planejamento
- -n, --dry-run         | dry run
- -v, --verbose         | be verbose
- -i, --interactive     | interactive picking
- -p, --patch           | select hunks interactively
- -e, --edit            | edit current diff and apply
- -f, --force           | allow adding otherwise ignored files
- -u, --update          | update tracked files
- --renormalize         | renormalize EOL of tracked files (implies -u)
- -N, --intent-to-add   | record only the fact that the path will be added later
- -A, --all             | add changes from all tracked and untracked files
- --ignore-removal      | ignore paths removed in the working tree (same as --no-all)
- --refresh             | don't add, only refresh the index
- --ignore-errors       | just skip files which cannot be added because of errors
- --ignore-missing      | check if - even missing - files are ignored in dry run
- --chmod (+|-)x        | override the executable bit of the listed files
- --pathspec-from-file <file> | read pathspec from file
- --pathspec-file-nul   | with --pathspec-from-file, pathspec elements are separated with NUL character
-
-# Observações
-para ignorar determinado arquivo ou arquivos em um repositório é necessário criar o seguinte arquivo dentro do seu projeto:
-
- ``` .gitignore ```
- 
- Para ignorar um arquivo no seu repositório é só colocar o nome do arquivo dentro do .gitignore:
- 
- ``` arquivos_secretos.txt ```
- 
- Para ignorar arquivos especificos:
- 
- ``` *.txt ```
- 
- ## Repositório Remoto
- Clonar repositório
- 
- CLONE - clonar repositório
- 
- FETCH - é utilizado para baixar as referência do projeto principal que está hospedado no servidor
- 
- PUSH - Subir o histórico de versionamento para o servidor 
- 
- PULL
  
 **Referências:**
-
 [Git - Documentation](https://git-scm.com/doc)
