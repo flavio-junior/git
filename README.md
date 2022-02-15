@@ -1,7 +1,12 @@
 ## Tipos de sistemas de controle de versão
-* Local Computer ```Local```
-* Central VCS Server ```Centralizado```
-* Server Computer ```Distribuido ```
+* Local Version Control Systems ```Sistemas de controle de versão local```
+* Centralized Version Control Systems ```Sistema de controle de versão centralizado```
+* Distributed Version Control Systems ```Sistema de controle de versão distribuido ```
+
+## Os três estados principais do git
+* Modified - Alterações feitas nos arquivos que ainda não foram confirmadas no banco de dados.
+* Staged - O arquivo modificado foi selecionado e as alterações feitas no projeto deve ser salvas na próxima versão do projeto. 
+* Committed - Versão do projeto, armazenada com segurança em um banco de dados local.
 
 ## Ajuda
 
@@ -22,32 +27,17 @@ git help status
 git add -h
 ```
 
-  Siglas  | Definição |
-:---------|:----------|
- Branches | Galho
- -n, --dry-run         | dry run
- -v, --verbose         | be verbose
- -i, --interactive     | interactive picking
- -p, --patch           | select hunks interactively
- -e, --edit            | edit current diff and apply
- -f, --force           | allow adding otherwise ignored files
- -u, --update          | update tracked files
- --renormalize         | renormalize EOL of tracked files (implies -u)
- -N, --intent-to-add   | record only the fact that the path will be added later
- -A, --all             | add changes from all tracked and untracked files
- --ignore-removal      | ignore paths removed in the working tree (same as --no-all)
- --refresh             | don't add, only refresh the index
- --ignore-errors       | just skip files which cannot be added because of errors
- --ignore-missing      | check if - even missing - files are ignored in dry run
- --chmod (+|-)x        | override the executable bit of the listed files
- --pathspec-from-file <file> | read pathspec from file
- --pathspec-file-nul   | with --pathspec-from-file, pathspec elements are separated with NUL character
-
 ## Checando configurações 
 **Verificar as configurações do usuário na máquina que foi instalado o git**
 ```
+git config -l
 git config --list
 ```
+**Visualizar todas as suas configurações e aonde elas estão sendo utilizadas**
+```
+git config --list --show-origin
+```
+
 **Adicionar nome do usuário em nivel global**
 ```
 git config --global user.name "Flávio Júnior"
@@ -61,7 +51,11 @@ git config --global user.email flaviojunior.work@gmail.com
 git config --global init.dafaultBranch master
 ```
 
-## Configuração de um repositório git
+## Inicializando um repositório em um diretório existente
+**No windows**
+```
+C:\Users\Info\Documents\git\git-repository>
+```
 **Iniciar repositório**
 ```
 git init
@@ -72,6 +66,10 @@ git status
 git status -s 
 git status --short
 ```
+**Abrir o projeto no Visual Studio Code**
+```
+C:\Users\Info\Documents\git\git-repository>code .
+```
 **Listar o histórico de commits do repositório**
 ```
 git log
@@ -80,6 +78,12 @@ git log
 ```
 git branch
 ```
+**Exibir as mudanças adicionados ou removidas em determinado arquivo**
+```
+git diff
+git diff --cached
+```
+## Adicionar um arquivo ou diretório na **staging area**
 **Adicionar um arquivo**
 ```
 git add arquivo.txt
@@ -88,11 +92,24 @@ git add arquivo.txt
 ```
 git add .
 ```
+**Visualizar as mudanças aplicadas em arquivos que foram modificados mesmo depois que foram enviados para staging area**
+```
+git diff
+```
+**Visualizar as mudanças aplicadas em determinado arquivo**
+```
+git diff --staged
+```
+**Remover arquivo**
+```
+git reset index.html
+```
 **Desfazer add**
 ```
 git restore --staged contato.html
 ```
-**Fazer um commit**
+## Fazer commit 
+**Commit**
 ```
 git commit
 ```
@@ -107,10 +124,6 @@ git commit -am "fazendo commit de forma direta"
 **Para adicionar alterações do projeto sem ter a necessidade de criar um novo commit**
 ```
 git commit --amend --no-edit index.html
-```
-**Desfazer ação sem defazer as alterações que foram feitas no código**
-```
-git reset index.html
 ```
 **Desfazer ação**
 ```
@@ -132,12 +145,6 @@ git rm index.html
 ````
 git mv index.html contato.html
 ````
-**Exibir os dados que foram adicionados em determinado arquivo**
-```
-git diff
-git diff --staged
-git diff --cached
-```
 
 24. git remote -v Listar todos os servidores remotos dentro do projeto.
 26. git push origin master - Para subir o repositório local para a branch master.
@@ -151,7 +158,31 @@ Comandos básicos para usar no terminal:
 4. cd - acessa determinada pasta através da rota especificada pelo usuário
 6. cd.. - voltar 
 7. ipconfig - Para verificar o ip da máquina
-8. 
+
+  Siglas  | Definição |
+:---------|:----------|
+ Branches | Galho
+ CVS | Sistema de controle de versão
+ Untracked files | arquivos não crackeado
+ Changes to be committed | Alterações confirmadas
+ Staging area | Area de planejamento
+ -n, --dry-run         | dry run
+ -v, --verbose         | be verbose
+ -i, --interactive     | interactive picking
+ -p, --patch           | select hunks interactively
+ -e, --edit            | edit current diff and apply
+ -f, --force           | allow adding otherwise ignored files
+ -u, --update          | update tracked files
+ --renormalize         | renormalize EOL of tracked files (implies -u)
+ -N, --intent-to-add   | record only the fact that the path will be added later
+ -A, --all             | add changes from all tracked and untracked files
+ --ignore-removal      | ignore paths removed in the working tree (same as --no-all)
+ --refresh             | don't add, only refresh the index
+ --ignore-errors       | just skip files which cannot be added because of errors
+ --ignore-missing      | check if - even missing - files are ignored in dry run
+ --chmod (+|-)x        | override the executable bit of the listed files
+ --pathspec-from-file <file> | read pathspec from file
+ --pathspec-file-nul   | with --pathspec-from-file, pathspec elements are separated with NUL character
 
 # Observações
 para ignorar determinado arquivo ou arquivos em um repositório é necessário criar o seguinte arquivo dentro do seu projeto:
