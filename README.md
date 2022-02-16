@@ -240,7 +240,10 @@ git remote -v
 ```
 **Subir repositório local para o servidor**
 ```
-git push origin main  
+git push origin main 
+```
+**Subir alterações do repositório local para o servidor"
+```
 git push -u origin main
 ```
 **Clonar repositório remoto**
