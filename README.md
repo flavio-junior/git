@@ -242,7 +242,7 @@ git remote -v
 ```
 git push origin main 
 ```
-**Subir alterações do repositório local para o servidor"
+**Subir alterações do repositório local para o servidor**
 ```
 git push -u origin main
 ```
