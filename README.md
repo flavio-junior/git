@@ -27,7 +27,11 @@ git help status
 git add -h
 ```
 
-## Alterar configurações do sistema  
+## Alterar configurações do sistema 
+**Ver a versão do git instalada na máquina**
+```
+git --version
+```
 **Verificar as configurações do usuário na máquina que foi instalado o git**
 ```
 git config -l
@@ -69,10 +73,6 @@ git status --short
 **Abrir o projeto no Visual Studio Code**
 ```
 C:\Users\Info\Documents\git\git-repository>code .
-```
-**Listar todas as branch do projeto**
-```
-git branch
 ```
 ## Adicionar um arquivo ou diretório na **staging area**
 **Adicionar um arquivo**
@@ -129,6 +129,22 @@ git checkout -f
 ```
 git log
 ```
+**Listar todas as branch do projeto**
+```
+git branch
+```
+**Alterar o nome da branch**
+```
+git branch -m "main"
+```
+**Navegar em uma branch especifica**
+```
+git checkout master
+```
+**Juntar branch secundária com a principal**
+```
+git merge css
+```
 **Desfazer commit sem apagar os arquivos modificados no projeto**
 ```
 git reset 0d27528ebba6650b0a70d59d529983b81adf2962 
@@ -183,7 +199,7 @@ pick c0abaf2 Página de contato
 drop 9dc5ab1 Página sobre
 pick a652e8a Página home
 ```
-**Excluir arquivo ou diretóro**
+**Excluir um arquivo ou diretóro**
 ```
 git rm index.html
 ```
@@ -207,34 +223,47 @@ arquivos_secretos.txt
 *.txt
 ```
 
- ## Trabalhando com repositório remoto
- * CLONE ```Clonar repositório remoto```
- * FETCH ```Reponsável por baixar as referências dos dados em um repositório local```
- * PUSH ```Subir código fonte para o servidor```
- * PULL  ```Baixar arquivos reais na area de trabalho local```
+## Trabalhando com repositório remoto
+* CLONE ```Clonar repositório remoto```
+* FETCH ```Reponsável por baixar as referências dos dados em um repositório local```
+* PUSH ```Subir código fonte para o servidor```
+* PULL  ```Baixar arquivos reais na area de trabalho local```
  
-Vincular repositório local com um repositório remoto
+**Vincular repositório local com um repositório remoto**
 ```
 git remote add origin https://github.com/flavio-junior/git-crash.git
 ```
-Listar todos os repositórios remotos
+**Listar todos os repositórios remotos**
 ```
 git remote
 git remote -v
 ```
-Subir repositório local para o servidor
+**Subir repositório local para o servidor**
 ```
 git push origin main  
+git push -u origin main
 ```
-Clonar repositório remoto
+**Clonar repositório remoto**
 ```
 git clone https://gist.github.com/2545add34e4fec21ec16.git
 ```
-Baixar uma branch especifica
+**Baixar atualizações do servidor**
+```
+
+```
+**Baixar uma branch especifica**
 ```
 git pull origin master
 ```
- 
+**Renomeando repositório remoto**
+```
+git remote rename origin repository 
+```
+**Clonando repositório com SSH e com uma branch especifica do projeto**
+```
+git remote set-url repository git@github.com:flavio-junior/git.git
+```
+
 # CMD
 Comandos básicos para usar no terminal:
 1. mkdir - criar uma pasta
