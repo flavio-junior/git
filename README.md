@@ -226,9 +226,15 @@ arquivos_secretos.txt
 
 ## Repositório Remoto
 CLONE ```Clonar repositório remoto```
-FETCH ```Reponsável por baixar as referências dos dados em um repositório local```
-PUSH ```Subir código fonte para o servidor```
-PULL  ```Baixar arquivos reais na area de trabalho local```
+
+FETCH ```Reponsável por baixar as referências do repositório remoto para o repositório local local```
+
+PUSH ```Subir alterações do repositório local para o repositório remoto```
+
+***Baixar modificações salvas no repositório remoto para o repositório local***
+```
+git pull
+```
 
 **Clonar repositório remoto**
 ```
