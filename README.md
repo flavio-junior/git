@@ -246,7 +246,7 @@ git remote show origin
 git remote
 git remote -v
 ```
-***Vincular repositório local com um repositório remoto***
+***Vincular repositório local ao repositório remoto***
 ```
 git remote add origin https://github.com/flavio-junior/git-crash.git
 ```
