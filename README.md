@@ -132,6 +132,7 @@ git log
 **Listar todas as branch do projeto**
 ```
 git branch
+git branch -l
 ```
 **Alterar o nome da branch**
 ```
