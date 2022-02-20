@@ -229,46 +229,37 @@ CLONE ```Clonar repositório remoto```
 
 FETCH ```Reponsável por baixar as referências do repositório remoto para o repositório local local```
 
-PUSH ```Subir alterações do repositório local para o repositório remoto```
-
+***Clonar repositório remoto***
+```
+git clone https://gist.github.com/2545add34e4fec21ec16.git
+```
+***Clonar repositório com SSH***
+```
+git remote set-url repository git@github.com:flavio-junior/git.git
+```
+***Exibir informações do repositório remoto***
+```
+git remote show origin
+```
+***Listar todos os repositórios remotos contidos no repositório local***
+```
+git remote
+git remote -v
+```
+***Vincular repositório local com um repositório remoto***
+```
+git remote add origin https://github.com/flavio-junior/git-crash.git
+```
+***Salvar modificações do repositório local no repositório remoto***
+```
+git push origin main 
+git push -u origin main
+```
 ***Baixar modificações salvas no repositório remoto para o repositório local***
 ```
 git pull
 ```
 
-**Clonar repositório remoto**
-```
-git clone https://gist.github.com/2545add34e4fec21ec16.git
-```
-**Clonar repositório com SSH**
-```
-git remote set-url repository git@github.com:flavio-junior/git.git
-```
-**Exibir informações do repositório remoto**
-```
-git remote show origin
-```
-**Listar todos os repositórios remotos**
-```
-git remote
-git remote -v
-```
-**Vincular repositório local com um repositório remoto**
-```
-git remote add origin https://github.com/flavio-junior/git-crash.git
-```
-**Subir repositório local para o servidor**
-```
-git push origin main 
-```
-**Subir alterações do repositório local para o servidor**
-```
-git push -u origin main
-```
-**Baixar atualizações do servidor**
-```
-
-```
 **Baixar uma branch especifica**
 ```
 git pull origin master
