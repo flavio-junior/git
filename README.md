@@ -224,20 +224,32 @@ arquivos_secretos.txt
 *.txt
 ```
 
-## Trabalhando com repositório remoto
-* CLONE ```Clonar repositório remoto```
-* FETCH ```Reponsável por baixar as referências dos dados em um repositório local```
-* PUSH ```Subir código fonte para o servidor```
-* PULL  ```Baixar arquivos reais na area de trabalho local```
- 
-**Vincular repositório local com um repositório remoto**
+## Repositório Remoto
+CLONE ```Clonar repositório remoto```
+FETCH ```Reponsável por baixar as referências dos dados em um repositório local```
+PUSH ```Subir código fonte para o servidor```
+PULL  ```Baixar arquivos reais na area de trabalho local```
+
+**Clonar repositório remoto**
 ```
-git remote add origin https://github.com/flavio-junior/git-crash.git
+git clone https://gist.github.com/2545add34e4fec21ec16.git
+```
+**Clonar repositório com SSH**
+```
+git remote set-url repository git@github.com:flavio-junior/git.git
+```
+**Exibir informações do repositório remoto**
+```
+git remote show origin
 ```
 **Listar todos os repositórios remotos**
 ```
 git remote
 git remote -v
+```
+**Vincular repositório local com um repositório remoto**
+```
+git remote add origin https://github.com/flavio-junior/git-crash.git
 ```
 **Subir repositório local para o servidor**
 ```
@@ -246,10 +258,6 @@ git push origin main
 **Subir alterações do repositório local para o servidor**
 ```
 git push -u origin main
-```
-**Clonar repositório remoto**
-```
-git clone https://gist.github.com/2545add34e4fec21ec16.git
 ```
 **Baixar atualizações do servidor**
 ```
@@ -263,10 +271,7 @@ git pull origin master
 ```
 git remote rename origin repository 
 ```
-**Clonando repositório com SSH e com uma branch especifica do projeto**
-```
-git remote set-url repository git@github.com:flavio-junior/git.git
-```
+
 
 # CMD
 Comandos básicos para usar no terminal:
