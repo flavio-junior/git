@@ -224,11 +224,7 @@ arquivos_secretos.txt
 *.txt
 ```
 
-## Repositório Remoto
-CLONE ```Clonar repositório remoto```
-
-FETCH ```Reponsável por baixar as referências do repositório remoto para o repositório local local```
-
+# ***Repositório Remoto***
 ***Clonar repositório remoto***
 ```
 git clone https://gist.github.com/2545add34e4fec21ec16.git
@@ -259,7 +255,6 @@ git push -u origin main
 ```
 git pull
 ```
-
 **Baixar uma branch especifica**
 ```
 git pull origin master
@@ -268,7 +263,10 @@ git pull origin master
 ```
 git remote rename origin repository 
 ```
-
+***FETCH*** 
+```
+Reponsável por baixar as referências do repositório remoto para o repositório local local
+```
 
 # CMD
 Comandos básicos para usar no terminal:
