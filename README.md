@@ -128,6 +128,7 @@ git checkout -f
 **Listar o histórico de commits do repositório**
 ```
 git log
+git log --oneline
 ```
 **Listar todas as branch do projeto**
 ```
@@ -255,17 +256,27 @@ git push -u origin main
 ```
 git pull
 ```
-**Baixar uma branch especifica**
+***Baixar uma branch especifica***
 ```
 git pull origin master
 ```
-**Renomeando repositório remoto**
+***Renomeando repositório remoto***
 ```
 git remote rename origin repository 
 ```
-***FETCH*** 
+## ***Tags***
+***Criando uma tag simples***
 ```
-Reponsável por baixar as referências do repositório remoto para o repositório local local
+git tag v1.0
+```
+***Listar todas as tags do repositório***
+```
+git tag
+git tag -l
+```
+***Exibir informações de um arquivo especifico***
+```
+git show v1.0
 ```
 
 # CMD
@@ -288,6 +299,8 @@ Comandos básicos para usar no terminal:
  Untracked files | arquivos não crackeado
  Changes to be committed | Alterações confirmadas
  Staging area | Area de planejamento
+ Lightweight | Referência para um certo commit salva em um arquivo dentro da pasta .git
+ Annotaded | Objeto salvo no banco de dados  que contém informações sobre quem criou, uma mensagem e podem ser assinadas e verificadas GNU Privacy Guard.
  
 **Referências:**
 [Git - Documentation](https://git-scm.com/doc)
