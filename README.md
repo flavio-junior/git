@@ -1,3 +1,9 @@
+<div align="center">
+<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+<img height="100" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
+
+</div>
+  
 # ***Tipos de sistemas de controle de versão***
 * Local Version Control Systems ```Sistemas de controle de versão local```
 * Centralized Version Control Systems ```Sistema de controle de versão centralizado```
