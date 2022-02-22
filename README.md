@@ -134,23 +134,6 @@ git log --oneline
 ```
 git log -1 HEAD
 ```
-***Listar todas as branch do projeto***
-```
-git branch
-git branch -l
-```
-***Alterar o nome da branch***
-```
-git branch -m "main"
-```
-***Navegar em uma branch especifica***
-```
-git checkout master
-```
-***Juntar branch secundária com a principal***
-```
-git merge css
-```
 ***Desfazer commit sem apagar os arquivos modificados no projeto***
 ```
 git reset 0d27528ebba6650b0a70d59d529983b81adf2962 
@@ -215,7 +198,7 @@ git mv index.html contato.html
 ````
 
 
-## gitignore
+# ***gitignore***
 ***Nomeação de um arquivo gitignore***
 ```
 .gitignore
@@ -312,6 +295,45 @@ git config --global alias.st status
 ```
 
 ## ***Branches***
+***Criar uma branch***
+```
+git branch testing
+git switch -c adones
+```
+***Listar todas as branch do projeto***
+```
+git branch
+git branch -l
+```
+***Alterar o nome da branch***
+```
+git branch -m "main"
+```
+***Excluir uma branch***
+```
+git branch -d secondary
+```
+***Navegar até uma branch especifica***
+```
+git checkout master
+git switch testing
+```
+***Voltar para a branch anterior***
+```
+git switch -
+```
+***Criar uma branch alternativa***
+```
+git checkout -b secondary
+```
+***Juntar branch secundária com a principal***
+```
+git merge secondary
+```
+***Abortar merge***
+```
+git merge --abort
+```
 
 # CMD
 Comandos básicos para usar no terminal:
@@ -324,7 +346,7 @@ Comandos básicos para usar no terminal:
 
   Siglas  | Definição |
 :---------|:----------|
- Branches | Galho
+ Branches | Galho da árvore
  CVS | Sistema de controle de versão
  Untracked | Não creckeado
  Unmodified | Não modificado
@@ -336,5 +358,6 @@ Comandos básicos para usar no terminal:
  Lightweight | Referência para um certo commit salva em um arquivo dentro da pasta .git
  Annotaded | Objeto salvo no banco de dados  que contém informações sobre quem criou, uma mensagem e podem ser assinadas e verificadas GNU Privacy Guard.
  Aliases | Apelido
+ Merge | Mesclar
 **Referências:**
 [Git - Documentation](https://git-scm.com/doc)
