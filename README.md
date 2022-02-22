@@ -103,7 +103,7 @@ git restore index.html
 git restore --staged contato.html
 ```
 # ***Commit*** 
-***Como fazer um commit***
+***Commit simples***
 ```
 git commit
 ```
@@ -117,6 +117,7 @@ git commit -am "Commit de parâmetro único"
 ```
 ***Para adicionar alterações do projeto sem ter a necessidade de criar um novo commit***
 ```
+git commit --amend
 git commit --amend --no-edit
 ```
 ***Defazer uma ação indesejada dentro do projeto***
@@ -143,6 +144,14 @@ git reset 0d27528ebba6650b0a70d59d529983b81adf2962
 ***Desfazer alterações e voltar para um commit especifico***
 ```
 git reset --hard 3e39bbcd5d0e62aa612bb848ccb5fea77f07ffbc
+```
+***Desfazer o último commit sem desfazer as alterações realizadas no ultimo commit no repositório local***
+```
+git reset --soft HEAD~1
+```
+***Excluir último commit salvo no repositório remoto***
+```
+git push -f origin master
 ```
 ***Listar uma quantidade de commits especificos para excluir***
 ```
@@ -209,7 +218,7 @@ git mv index.html contato.html
 ``` 
 arquivos_secretos.txt 
 ``` 
-***Ignorar arquivos especificos***
+***Ignorar tipos de arquivos especificos***
 ```
 *.txt
 ```
@@ -336,6 +345,15 @@ git merge secondary
 ```
 git merge --abort
 ```
+***Adicionar branch do repositório remoto no repositório local***
+```
+git pull origin master
+```
+
+# ***Rebase***
+```
+
+```
 
 # CMD
 Comandos básicos para usar no terminal:
@@ -361,5 +379,6 @@ Comandos básicos para usar no terminal:
  Annotaded | Objeto salvo no banco de dados  que contém informações sobre quem criou, uma mensagem e podem ser assinadas e verificadas GNU Privacy Guard.
  Aliases | Apelido
  Merge | Mesclar
+ Rebase | 
 **Referências:**
 [Git - Documentation](https://git-scm.com/doc)
