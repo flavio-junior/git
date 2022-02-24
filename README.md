@@ -366,6 +366,11 @@ git rebase --continue
 git merge joao
 ```
 
+# ***Pull request***
+```
+
+```
+
 # CMD
 Comandos básicos para usar no terminal:
 1. mkdir - criar uma pasta
