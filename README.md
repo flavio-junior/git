@@ -128,6 +128,7 @@ git checkout -f
 ```
 git log
 git log --oneline
+git log --graph
 ```
 ***Listar o histórico de commits do repositório em uma única linha***
 ```
@@ -351,8 +352,18 @@ git pull origin master
 ```
 
 # ***Rebase***
+***Mergeando branch:***
 ```
-
+git merge adones
+```
+***Resolvendo conflito entre branches, passo a passo:***
+```
+git add .
+git rebase --continue
+git rebase master
+git add .
+git rebase --continue
+git merge joao
 ```
 
 # CMD
