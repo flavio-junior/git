@@ -352,7 +352,7 @@ git pull origin master
 ```
 
 # ***Rebase***
-***Mergeando branch:***
+***Mergeando branch***
 ```
 git merge adones
 ```
@@ -361,11 +361,19 @@ git merge adones
 git add .
 git rebase --continue
 git rebase master
+
+git switch João
+git rebase master
 git add .
 git rebase --continue
-git merge joao
+git switch master
+git merge João
 ```
-
+# ***Abortar rebase***
+```
+git rebase --skip
+git rebase --abort
+```
 # ***Pull request***
 ```
 
