@@ -138,6 +138,10 @@ git log --oneline
 ```
 git log -1 HEAD
 ```
+***Listar dados do HEAD no commit***
+***
+git show HEAD 
+***
 ***Desfazer commit sem apagar os arquivos modificados no projeto***
 ```
 git reset 0d27528ebba6650b0a70d59d529983b81adf2962 
@@ -255,6 +259,14 @@ git push -u origin main
 ```
 git pull
 ```
+***Baixar todas as referências do repositório remoto***
+```
+git fetch --all
+```
+***Listar todas as branches do repositório remoto no repositório local***
+```
+git branch -r
+```
 ***Baixar uma branch especifica***
 ```
 git pull origin master
@@ -369,14 +381,26 @@ git rebase --continue
 git switch master
 git merge João
 ```
-# ***Abortar rebase***
+***Abortar rebase***
 ```
 git rebase --skip
 git rebase --abort
 ```
-# ***Pull request***
+***Rebase com usuário remoto***
 ```
-
+git switch yuri
+git pull --rebase origin master
+git add .
+git rebase continue
+```
+***Excluindo rebase***
+```
+git rebase -i master
+git rebase -i HEAD~4
+```
+***Subir alterações para uma branch remota***
+```
+git push -f origin yuri
 ```
 
 # CMD
