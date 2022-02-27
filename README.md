@@ -328,6 +328,9 @@ git switch -c adones
 ```
 git branch
 git branch -l
+git branch --merged
+git branch --no-merged
+git branch -r --no-merged
 ```
 ***Alterar o nome da branch***
 ```
