@@ -463,5 +463,7 @@ Comandos básicos para usar no terminal:
  Merge | Mesclar
  Rebase | 
  Stashing | 
+ Workflow |
+ Hooks |
 **Referências:**
 [Git - Documentation](https://git-scm.com/doc)
