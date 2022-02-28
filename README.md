@@ -115,10 +115,28 @@ git commit -m "Implementando recursos na página principal do site"
 ```
 git commit -am "Commit de parâmetro único"
 ```
-***Para adicionar alterações do projeto sem ter a necessidade de criar um novo commit***
+***Adicionar alterações do projeto sem ter a necessidade de criar um novo commit***
 ```
 git commit --amend
 git commit --amend --no-edit
+```
+***Salvar arquivos***
+```
+git stash
+```
+***Listar os arquivos que foram salvos***
+```
+ git stash list
+```
+***Abrir arquivo alterado***
+```
+ git stash apply
+ git stash apply 0
+ git stash apply --index
+```
+***Excluir arquivos salvos***
+```
+git stash pop
 ```
 ***Defazer uma ação indesejada dentro do projeto***
 ```
@@ -233,9 +251,13 @@ arquivos_secretos.txt
 ```
 git clone https://gist.github.com/2545add34e4fec21ec16.git
 ```
-***Clonar repositório com SSH***
+***Clonar repositório remoto com SSH***
 ```
-git remote set-url repository git@github.com:flavio-junior/git.git
+git remote set-url origin git@github.com:flavio-junior/git-crash.git
+```
+***Clonar repositório remoto com HTTPS***
+```
+git remote set-url origin https://github.com/flavio-junior/git-crash.git
 ```
 ***Exibir informações do repositório remoto***
 ```
@@ -324,6 +346,10 @@ git config --global alias.st status
 git branch testing
 git switch -c adones
 ```
+***Ver a versão da branch***
+```
+git branch -v
+```
 ***Listar todas as branch do projeto***
 ```
 git branch
@@ -332,9 +358,14 @@ git branch --merged
 git branch --no-merged
 git branch -r --no-merged
 ```
-***Alterar o nome da branch***
+***Renomear o nome da branch***
 ```
 git branch -m "main"
+git branch --move test testing
+```
+***Renomear branch remota a partir do repositório local***
+```
+git push --set-upstream origin Yuri
 ```
 ***Excluir uma branch***
 ```
@@ -431,5 +462,6 @@ Comandos básicos para usar no terminal:
  Aliases | Apelido
  Merge | Mesclar
  Rebase | 
+ Stashing | 
 **Referências:**
 [Git - Documentation](https://git-scm.com/doc)
