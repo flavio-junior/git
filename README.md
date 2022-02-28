@@ -157,9 +157,9 @@ git log --oneline
 git log -1 HEAD
 ```
 ***Listar dados do HEAD no commit***
-***
+```
 git show HEAD 
-***
+```
 ***Desfazer commit sem apagar os arquivos modificados no projeto***
 ```
 git reset 0d27528ebba6650b0a70d59d529983b81adf2962 
