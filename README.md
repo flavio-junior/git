@@ -293,6 +293,10 @@ git branch -r
 ```
 git pull origin master
 ```
+***Baixar uma branch remota***
+```
+git checkout master
+```
 ***Renomeando repositório remoto***
 ```
 git remote rename origin repository 
