@@ -276,6 +276,8 @@ git remote add origin https://github.com/flavio-junior/git-crash.git
 ```
 git push origin main 
 git push -u origin main
+git push --set-upstream origin Feature/MergeDevolopPix/Devolucao
+
 ```
 ***Baixar modificações salvas no repositório remoto para o repositório local***
 ```
