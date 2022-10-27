@@ -299,6 +299,10 @@ git pull origin master
 ```
 git checkout master
 ```
+***Resolver conflito em arquivo de forma automatizada***
+```
+git checkout --theirs CHANGELOG.md
+```
 ***Renomeando repositório remoto***
 ```
 git remote rename origin repository 
