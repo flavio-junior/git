@@ -447,6 +447,21 @@ git rebase -i HEAD~4
 git push -f origin yuri
 ```
 
+***Ver o número total de commits de hoje:***
+```
+git log --since="00:00:00" --oneline | wc -l
+```
+
+***Ver a lista dos commits de hoje:***
+```
+git log --since="00:00:00" --oneline
+```
+
+***Ver o número de commits apenas do seu usuário:***
+```
+git log --author="$(git config user.name)" --since="00:00:00" --oneline | wc -l
+```
+
 # CMD
 Comandos básicos para usar no terminal:
 1. mkdir - criar uma pasta
